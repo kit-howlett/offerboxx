@@ -1,0 +1,23 @@
+{
+  "name": "offerboxx",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The Offerboxx website",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kit-howlett/offerboxx.git"
+  },
+  "author": "Kit Howlett <kit.howlett@gmail.com>",
+  "contributors": [
+    "Kieran Barker <kieranbarker@outlook.com> (https://kbarker.dev)"
+  ],
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kit-howlett/offerboxx/issues"
+  },
+  "homepage": "https://github.com/kit-howlett/offerboxx#readme"
+}
