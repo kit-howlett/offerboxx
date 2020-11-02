@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kit-howlett/offerboxx/issues"
   },
-  "homepage": "https://github.com/kit-howlett/offerboxx#readme"
+  "homepage": "https://github.com/kit-howlett/offerboxx#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
 }
