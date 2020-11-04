@@ -1,0 +1,24 @@
+<div data-temp="header">
+  <div data-temp="images">
+    <img src="{{ header.src }}" alt="{{ header.alt }}">
+    <img src="{{ logo }}" alt="{{ title }}">
+  </div>
+  <div data-temp="meta">
+    <div>
+      <h1>{{ title }}</h1>
+      <p><b>Last Updated:</b> <time datetime="{{ page.date | w3DateFilter }}">{{ page.date | dateFilter }}</time></p>
+      <div>
+        <!-- tags -->
+      </div>
+    </div>
+    <div>
+      <p><b>Status:</b> {{ status }}</p>
+    </div>
+  </div>
+  <div data-temp="desc">
+    <div>
+      {{ desc | safe }}
+    </div>
+    <a href="{{ link }}">Visit Our Website</a>
+  </div>
+</div>
