@@ -1,12 +1,8 @@
 {% extends "layouts/base.html" %} 
 
 {% block content %}
-  <article>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-  </article>
   <div>
-    <h2>Listings</h2>
+    <h1>Listings</h1>
     <ul>
       {% for listing in collections.listings %}
         <li>

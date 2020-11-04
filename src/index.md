@@ -1,4 +1,4 @@
 ---
-title: 'Hello, World!'
+title: 'Home'
 layout: 'layouts/home.html'
 ---
