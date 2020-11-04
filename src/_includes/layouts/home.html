@@ -5,4 +5,14 @@
     <h1>{{ title }}</h1>
     {{ content | safe }}
   </article>
+  <div>
+    <h2>Listings</h2>
+    <ul>
+      {% for listing in collections.listings %}
+        <li>
+          <a href="{{ listing.url }}">{{ listing.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 {% endblock %}

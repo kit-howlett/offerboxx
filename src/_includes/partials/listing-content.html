@@ -1,0 +1,25 @@
+<div data-temp="content">
+  <h2>Information You Should Know</h2>
+  {{ information | safe }}
+  <h2>Current Opening Hours</h2>
+  <ul>
+    {% for key, val in openingHours %}
+      <li><b>{{ key | title }}:</b> {{ val }}</li>
+    {% endfor %}
+  </ul>
+  <h2>Reach Us Here</h2>
+  <ul>
+    {% for key, val in contactDetails %}
+      <li><b>{{ key | title }}:</b> <a href="{{ prefixes[key] + val | replace(' ', '') }}">{{ val }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul>
+    {% for key, val in socialLinks %}
+      <li>
+        <a href="{{ val }}">
+          <img src="/images/social/{{ key }}.svg" alt="{{ key | title }}">
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

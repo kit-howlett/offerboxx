@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/kit-howlett/offerboxx#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "moment": "^2.29.1"
   }
 }
