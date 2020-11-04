@@ -1,6 +1,3 @@
 const moment = require('moment');
 
-module.exports = value => {
-  const dateObject = moment(value);
-  return dateObject.format('Do MMMM YYYY [|] HH:mm');
-};
+module.exports = value => moment(value).format('Do MMMM YYYY [|] HH:mm');
