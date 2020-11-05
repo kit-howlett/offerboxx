@@ -1,5 +1,5 @@
 /*!
- * Andy Bell's "Modern CSS Reset"
+ * A modified version of Andy Bell's "Modern CSS Reset"
  * https://github.com/hankchizljaw/modern-css-reset
  */
 
@@ -56,15 +56,9 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
-picture {
+img {
   max-width: 100%;
   display: block;
-}
-
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -75,17 +69,12 @@ select {
   font: inherit;
 }
 
-/* Blur images when they have no alt attribute */
-img:not([alt]) {
-  filter: blur(10px);
-}
-
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
+    animation-duration: 0.01s !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.01s !important;
     scroll-behavior: auto !important;
   }
 }

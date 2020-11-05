@@ -1,0 +1,14 @@
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &[class] {
+    margin-left: -#{get-size('400')};
+  }
+
+  > * {
+    padding-top: get-size('400');
+    padding-left: get-size('400');
+  }
+}
