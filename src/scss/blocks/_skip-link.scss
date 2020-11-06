@@ -1,0 +1,6 @@
+.skip-link {
+  // @extends should be used with care, but this is a great example of them being hella useful
+  &:not(:focus) {
+    @extend .visually-hidden;
+  }
+}

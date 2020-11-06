@@ -1,14 +1,20 @@
-<a href="#main-content">Skip to content</a>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<header>
-  <a href="/" aria-label="{{ site.name }} - home">{{ site.name }}</a>
-  <nav aria-label="Primary navigation">
-    <ul>
-      {% for item in navigation %}
-        <li>
-          <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+<header class="site-head">
+  <div class="wrapper">
+    <div class="site-head__inner">
+      <a class="site-head__logo" href="/" aria-label="{{ site.name }} - home">
+        {% include "partials/logo.svg" %}
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+          {% for item in navigation %}
+            <li>
+              <a {{ "class=button data-variant=ghost" if loop.last }} href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

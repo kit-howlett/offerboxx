@@ -1,0 +1,15 @@
+.site-head {
+  padding: get-size('600') 0;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin-right: get-size('600');
+  }
+}
