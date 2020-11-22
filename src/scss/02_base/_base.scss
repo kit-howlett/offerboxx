@@ -9,6 +9,10 @@ body {
   font-weight: $normal;
   letter-spacing: -0.015em;
   color: $primary-color;
+  
+  &.mobile-menu-open {
+    overflow: hidden;
+  }
 }
 
 ul, ol {
