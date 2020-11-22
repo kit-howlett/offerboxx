@@ -38,21 +38,9 @@
     <div class="footer-menu__col footer-menu__col--2">
       <h6 class="font--regular font--bold footer-menu__title">Business Categories</h6>
       <ul>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Building & Construction</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Business Services</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Computer Services</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Education & Employment</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Entertainment & Music</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Financial & Legal</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Food & Drink</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Health, Beauty & Lifestyle</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Home & Garden</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Manufacturers & Engineers</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Motoring</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Public & Social Services</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Shopping</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Sports & Leisure</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Transport</a></li>
+        {% for category in collections.categories %}
+          <li class="font--regular"><a href="/categories/{{ category.data.title | slug }}" class="font--secondary-color footer-menu__link">{{ category.data.title }}</a></li>
+        {% endfor %}
       </ul>
     </div>
     <!-- Column 3 -->
