@@ -1,0 +1,26 @@
+<li class="listing__item">
+  <!-- Status -->
+  <div class="status">
+    <div>
+      <div class="status__status-icon status__status-icon--warning"></div>
+    </div>
+    <p class="font--small status__status-text" ><span class="font--semi-bold">Status:</span> {{ listing.data.status }}</p>
+  </div>
+  <!-- Profile Details -->
+  <div class="listing__profile-details">
+    <img src="/images/placeholder.jpg" alt="Harris Building Logo" class="listing__logo">
+    <div>
+      <h2 class="font--large font--bold listing__name">{{ listing.data.title }}</h2>
+      <p class="font--regular listing__description">{{ listing.data.desc | safe }}</p>
+    </div>
+  </div>
+  <!-- Tags & CTA -->
+  <div class="listing__footer">
+    <div class="listing__tags tags">
+      {% for tag in listing.data.tags %}
+        {% include 'partials/tag.html' %}
+      {% endfor %}
+    </div>
+    <a href="/listings/{{ listing.data.title | slug }}" class="btn btn--primary btn--x-small listing__btn">View More</a>
+  </div>
+</li>
