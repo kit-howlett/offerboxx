@@ -1,10 +1,102 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %}
 
 {% block content %}
-  <article>
-    <div class="wrapper">
-      {% include "partials/listing-header.html" %}
-      {% include "partials/listing-content.html" %}
+<div class="page-container">
+  <section class="profile-page">
+    <div class="profile-page__header profile">
+      <div class="profile__wrapper">
+        <!-- Profile Logo & Cover Photo -->
+        <div class="profile__header">
+          <img src="/images/listings/{{ title | slug }}/header/{{ header.src }}" alt="{{ header.alt }}" class="profile__coverphoto">
+          <img src="/images/listings/{{ title | slug }}/logo/{{ logo }}" alt="{{ title }} Logo" class="profile__profilephoto">
+        </div>
+        <!-- Profile Details -->
+        <div class="profile__profile-details">
+          <!-- ID -->
+          <div class="profile__id-wrapper">
+            <h1 class="font--bold font--xx-large">{{ title }}</h1>
+            <p class="font--small"><span class="font--bold">Last Updated: </span>{{ page.date | dateFilter }}</p>
+            <div class="profile__tags tags">
+              {% for tag in tags %}
+                {% include 'partials/tag.html' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- Status -->
+          <div class="profile__status-wrapper">
+            <div class="status">
+              <div>
+                <div class="status__status-icon status__status-icon--{{ status.icon }}"></div>
+              </div>
+              <p class="font--small status__status-text" ><span class="font--bold">Status:</span> {{ status.text }}</p>
+            </div>
+          </div>
+          <!-- Bio -->
+          <div class="profile__bio-wrapper">
+            {{ desc | safe }}
+          </div>
+          <!-- CTA -->
+          <div class="profile__cta-wrapper">
+            <a href="{{ link }}" class="btn btn--primary" target="_blank">Visit Our Website<i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-  </article>
+
+    <div class="profile-page__body">
+      <div class="profile-page__body-wrapper">
+        <div class="profile-covid-warning">
+          <img src="img/warning-icon.svg" alt="" class="profile-covid-warning__warning-icon">
+        </div>
+        <!-- Covid Message -->
+        <div class="profile-covid-info">
+          <h2 class="font--bold font--large profile-covid-info__title">Information You Should Know</h2>
+          {{ information | safe }}
+        </div>
+        <!-- Opening Hours Details -->
+        <div class="profile-opening-hours">
+          <h2 class="font--bold font--large profile-opening-hours__title">Current Opening Hours</h2>
+          <table class="profile-opening-hours__table">
+            <tbody>
+              {% for day, hours in openingHours %}
+                <tr>
+                  <td class="font--regular font--bold">{{ day | capitalize }}</td>
+                  <td class="font--regular">{{ hours }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <!-- Contact Details -->
+        <div class="profile-contact">
+          <h2 class="font--bold font--large profile-contact__title">Reach Us Here</h2>
+          <div class="profile-contact__wrapper profile-contact__wrapper--1">
+
+            <div class="profile-contact__container">
+              <img src="/images/cursor-icon.svg" alt="" class="profile-contact__icon">
+              <p class="font--regular"><span class="font--bold">Website: </span><a href="{{ contactDetails.website }}" target="_blank">{{ contactDetails.website }}</a></li></p>
+            </div>
+
+            <div class="profile-contact__container">
+              <img src="/images/email-icon.svg" alt="" class="profile-contact__icon">
+              <p class="font--regular"><span class="font--bold">Email: </span><a href="mailto:{{ contactDetails.email }}">{{ contactDetails.email }}</a></p>
+            </div>
+
+            <div class="profile-contact__container">
+              <img src="/images/phone-icon.svg" alt="" class="profile-contact__icon">
+              <p class="font--regular"><span class="font--bold">Phone: </span><a href="tel:{{ contactDetails.phone }}">{{ contactDetails.phone }}</a></p>
+            </div>
+          </div>
+          <div class="profile-contact__wrapper profile-contact__wrapper--2">
+            {% for key, val in socialLinks %}
+              <a href="{{ val }}" class="profile-contact__social-icon">
+                <img src="/images/social/{{ key }}.svg" alt="{{ key | capitalize }} Icon">
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 {% endblock %}
