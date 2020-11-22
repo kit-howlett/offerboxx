@@ -1,5 +1,5 @@
 {
   "layout": "layouts/locations/detail.html",
-  "permalink": "/locations/{{ title | slug }}/index.html",
+  "permalink": "/location/{{ title | slug }}/index.html",
   "date": "Last Modified"
 }
