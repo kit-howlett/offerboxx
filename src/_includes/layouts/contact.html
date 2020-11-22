@@ -1,7 +1,37 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-  <div class="wrapper">
-    <h1>Contact Us!</h1>
-  </div>
+<main class="page-container contact-page">
+  <section class="contact-page__section">
+    <h1 class="font--bold font--xxx-large text-center contact-page__heading">Want To List Your Business For Free?</h1>
+    <p class="font--regular text-center contact-page__para">We realise it is tough for small businesses at the moment so wanted to do our bit to help out! You can list your business on Offerboxx for free. One day, Offerboxx will be the go to website to discover local deals and discounts but for now, we want to use our platform to help you reach your customers during the pandemic.</p>
+    <img src="/img/contact-image.jpg" alt="" class="contact-page__img">
+    <p class="font--regular text-center contact-page__para">Getting your business on our site is easy. First, please visit the link “Get Started” below and fill out the Form with your most up to date details. Once we have your details, we will create a profile for your business as soon as possible. Please ensure you leave an email address so we can contact you as soon as your profile is live.</p>
+    <div class="text-center contact-page__btn-container">
+      <a href="#" class="btn btn--primary">Get Started</a>
+    </div>
+  </section>
+  
+  <section class="contact-page__section">
+    <h2 class="font--bold font--xx-large text-center contact-page__heading">Get In Touch</h2>
+    <p class="font--regular text-center contact-page__para">Have a question or concern? Do you need to update any information on your profile? It’s easy to get in touch, simply drop us an email or reach out via social media. We aim to get back to you as quickly as possible!</p>
+    <div class="contact-page__email-wrapper">
+      <img src="/images/email-icon.svg" alt="Email Icon" class="contact-page__email-icon">
+      <address class="font--regular contact-page__email-address">
+        <a href="mailto:info@offerboxx.co.uk">info@offerboxx.co.uk</a>
+      </address>
+    </div>
+    <div class="contact-page__social-wrapper">
+      <a href="#" class="contact-page__social-link">
+        <img src="/images/facebook-social-icon.svg" alt="" class="contact-page__social-icon">
+      </a>
+      <a href="#" class="contact-page__social-link">
+        <img src="/images/messenger-social-icon.svg" alt="" class="contact-page__social-icon">
+      </a>
+      <a href="#" class="contact-page__social-link">
+        <img src="/images/linkedin-social-icon.svg" alt="" class="contact-page__social-icon">
+      </a>
+    </div>
+  </section>
+</main>
 {% endblock %}
