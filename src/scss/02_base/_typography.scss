@@ -1,0 +1,75 @@
+.font {
+
+  &--xxx-large {
+    font-size: 1.75em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 1.5em;
+    }
+  }
+
+  &--xx-large {
+    font-size: 1.5em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 1.25em;
+    }
+  }
+
+  &--x-large {
+    font-size: 1.25em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 1.125em;
+    }
+  }
+
+  &--large {
+    font-size: 1.125em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 1em;
+    }
+  }
+
+  &--regular {
+    font-size: 1em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 0.875em;
+    }
+  }
+
+  &--small {
+    font-size: 0.875em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 0.75em;
+    }
+  }
+
+  &--x-small {
+    font-size: 0.75em;
+
+    @include rmw($breakpoint-tablet) {
+      font-size: 0.625em;
+    }
+  }
+
+  &--semi-bold {
+    font-weight: $semibold;
+  }
+
+  &--bold {
+    font-weight: $bold;
+  }
+
+  &--secondary-color {
+    color: $secondary-color;
+  }
+
+  &--accent-color {
+    color: $dark-accent-color;
+  }
+}
+

@@ -1,0 +1,21 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__tag {
+    display: inline-block;
+    padding: 0.75em 1.25em;
+    margin-right: 0.71em;
+    margin-top: 0.71em;
+    background-color: $light-accent-color;
+    border-radius: 20px;
+    font-weight: $bold;
+    font-size: 0.75em;
+    color: $dark-accent-color;
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.featured-posts {
+
+  &__post {
+    
+    @include rmw($breakpoint-small-laptop) {
+      width: 48%;
+      text-align: center;
+    }
+
+    @include rmw($breakpoint-tablet) {
+      width: 49%;
+    }
+
+    @include rmw($breakpoint-large-mobile) {
+      width: 100%;
+    }
+  }
+
+  &__post + &__post {
+    margin-top: 1.875em;
+
+    @include rmw($breakpoint-small-laptop) {
+      margin-top: 0;
+    }
+
+    @include rmw($breakpoint-large-mobile) {
+      margin-top: 1.875em;
+    }
+  }
+
+  &__post-wrapper {
+    display: flex;
+    transition: opacity .4s;
+
+    &:hover,
+    &:focus {
+      opacity: .75;
+    }
+
+    @include rmw($breakpoint-small-laptop) {
+      flex-direction: column;
+    }
+  }
+
+  &__post-title {
+    margin-bottom: .625em;
+  }
+
+  &__post-description {
+    width: 100%;
+
+    @include rmw($breakpoint-small-laptop) {
+      padding: 0 5%;
+    }
+
+    @include rmw($breakpoint-large-mobile) {
+      margin: 0 auto;
+      max-width: 400px;
+    }
+  }
+
+  &__img {
+    margin-right: 2.25em;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 4px;
+
+    @include rmw($breakpoint-small-laptop) {
+      margin-right: 0;
+      margin-bottom: 1em;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

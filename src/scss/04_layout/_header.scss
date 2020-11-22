@@ -1,0 +1,90 @@
+.site-header {
+
+  margin-bottom: 40px;
+  
+  @include rmw($breakpoint-small-laptop) {
+    box-shadow: 0 1px 5px rgba($color: #727C9F, $alpha: 0.1);
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  &__logo {
+    padding: 0.75em 0;
+    width: 175px;
+
+    @include rmw($breakpoint-large-mobile) {
+      width: 150px;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    outline: none;
+
+    @include rmw($breakpoint-small-laptop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+
+    &--normal {
+      display: flex;
+      align-items: center;
+      
+      @include rmw($breakpoint-small-laptop) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      
+      @include rmw($breakpoint-small-laptop) {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        height: 0vh;
+        overflow: auto;
+        background-color: white;
+        transition: height 500ms ease-in-out;
+
+        &.show {
+          height: 100vh;
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: $primary-color;
+    font-weight: $bold;
+    padding: 0.75em;
+    display: inline-block;
+
+    &:hover {
+      color: $dark-accent-color;
+    }    
+  }
+  
+  &__cta {
+    margin-left: 1.5em;
+  }
+}
+
+.mobile-menu {
+
+  &__inner {
+    margin: 0 auto !important;
+  }
+}
