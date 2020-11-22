@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  <div class="wrapper">
+    <h1>Locations</h1>
+    <ul>
+      {% for location in collections.locations %}
+        <li>
+          <a href="{{ location.url }}">{{ location.data.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
