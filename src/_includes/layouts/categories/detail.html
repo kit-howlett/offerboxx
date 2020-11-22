@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  <article>
+    <div class="wrapper">
+      <h1>{{ title }}</h1>
+      <ul>
+        {% for listing in collections.listings %}
+          {% for tag in listing.data.tags %}
+            {% if title == tag %}
+              <li><img src="{{ listing.data.logo | url }}" alt="" />{{ listing.data.title }}, {{ listing.data.status }}</li>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+{% endblock %}
