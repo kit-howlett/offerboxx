@@ -1,10 +1,5 @@
 .site-header {
-
   margin-bottom: 40px;
-  
-  @include rmw($breakpoint-small-laptop) {
-    box-shadow: 0 1px 5px rgba($color: #727C9F, $alpha: 0.1);
-  }
 
   &__nav {
     display: flex;
@@ -46,6 +41,7 @@
     }
 
     &--mobile {
+      display: none;
       opacity: 0;
       visibility: hidden;
       position: fixed;
@@ -57,11 +53,27 @@
       background-color: white;
       transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
 
+      @include rmw($breakpoint-small-laptop) {
+        display: block;
+      }
+
       &.show {
+        z-index: 1;
         visibility: visible;
         opacity: 1;
         height: 100vh;
       }
+    }
+  }
+
+  &__menu-inner {
+
+    &--normal {
+      display: flex;
+    }
+
+    &--mobile {
+      margin: 0 auto !important;
     }
   }
 
@@ -72,18 +84,54 @@
     display: inline-block;
 
     &:hover {
-      color: $dark-accent-color;
+      opacity: .75;
+    }
+
+    &--mobile {
+      padding: 1em 1em 1em 0;
     }
   }
   
   &__cta {
+    flex-shrink: 0;
     margin-left: 1.5em;
+
+    &--mobile {
+      margin: 1.5em 0 0;
+    }
+  }
+
+  &__hero {
+    margin: 6.25em auto 4.6875em;
   }
 }
 
-.mobile-menu {
+// Homepage Modifier
 
-  &__inner {
-    margin: 0 auto !important;
+.site-header--homepage {
+  background-image: url(/images/home-background.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+
+  .site-header__hero {
+    margin: 4.6875em auto 4.6875em;
+  }
+
+  .site-header__menu--mobile {
+    background: $dark-accent-color;
+  }
+
+  .site-header__link {
+    color: #fff;
+
+    &:hover {
+      opacity: .75;
+    }
+  }
+
+  .btn--secondary {
+    border: 2px solid #fff;
   }
 }

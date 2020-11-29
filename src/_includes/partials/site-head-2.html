@@ -1,0 +1,51 @@
+<header class="site-header site-header--homepage">
+  <nav class="page-container site-header__nav">
+    <a href="/" class="site-header__logo-link">
+      <img src="/images/offerboxx_secondary-logo.svg" alt="Offerboxx Logo" class="site-header__logo">
+    </a>
+    
+    <button id="hamburger" class="site-header__hamburger hamburger hamburger--spring" type="button">
+      <span class="font--bold font--large font--white" style="margin-right: 1em;">Menu</span>
+      <span class="hamburger-box">
+        <span class="hamburger-inner hamburger-inner--white"></span>
+      </span>
+    </button>
+
+    <div class="site-header__menu site-header__menu--normal">
+      <ul class="page-container site-header__menu-inner site-header__menu-inner--normal">
+        {% for item in navigation %}
+          <li class="site-header__menu-item">
+            <a href="{{ item.url }}" class="site-header__link">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <a href="/contact-us" class="btn btn--secondary btn--small site-header__cta">Post For Free</a>
+    </div>
+
+    <div id="mobile-nav" class="site-header__menu site-header__menu--mobile mobile-menu">
+      <ul class="page-container site-header__menu-inner site-header__menu-inner--mobile">
+        {% for item in navigation %}
+          <li class="site-header__menu-item">
+            <a href="{{ item.url }}" class="site-header__link site-header__link--mobile">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="page-container">
+        <a href="/contact-us" class="btn btn--secondary site-header__cta site-header__cta--mobile">Post For Free</a>
+      </div>
+    </div>
+  </nav>
+
+   <!-- Hero Section -->
+  <div class="page-container site-header__hero hero">
+    <h1 class="font--bold font--white font--xxxx-large text-center hero__title">Support The Local Businesses You Love</h1>
+    <p class="font--regular font--white text-center hero__para">Search our list of local businesses changing and adapting to a new way of working under the new COVID guidelines and help support the businesses you love!</p>
+    <div class="text-center hero__btn-container">
+      <a href="#our-mission" class="btn btn--secondary">Our Mission</a>
+    </div>
+  </div>
+</header>

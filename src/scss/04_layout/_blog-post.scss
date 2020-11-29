@@ -26,10 +26,7 @@
   }
 
   &__article {
-    display: flex;
-    flex-direction: column;
     margin: 0 auto;
-    padding: 0;
     max-width: 800px;
   }
 
@@ -48,6 +45,14 @@
 
   &__article-text {
     margin: 2em auto 0;
+
+    p {
+      font-size: 1em;
+
+      @include rmw($breakpoint-tablet) {
+        font-size: 0.875em;
+      }
+    }
 
     p + p {
       margin-top: 1em;

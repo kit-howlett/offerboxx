@@ -2,7 +2,7 @@
   <!-- Footer Mailchimp Signup Form -->
   <div class="site-footer__newsletter-signup newsletter-signup">
     <div class="newsletter-signup__wrapper">
-      <h2 class="font--bold font--xx-large text-center newsletter-signup__heading">Stay Up To Date</h2>
+      <h2 class="font--bold font--xx-large text-center newsletter-signup__heading">Don't Miss Out, Stay In The Loop</h2>
       <p class="font--regular text-center newsletter-signup__para">Want to know when our platform goes live? Simply pop your email address down in the form below and we will notify you when our site has launched. Exciting times!</p>
       <!-- Start Of Mailchimp Signup Form -->
       <div id="mc_embed_signup">
@@ -56,26 +56,17 @@
       <h6 class="font--regular font--bold footer-menu__title">Featured Posts</h6>
       <!-- Footer Featured Posts -->
       <div class="footer-menu__featured-posts featured-posts">
-        <!-- Featured Post 1 -->
-        <div class="featured-posts__post">
-          <a href="#" class="featured-posts__post-wrapper">
-            <img src="https://source.unsplash.com/random/1200x675" alt="Featured Post Image" class="featured-posts__img">
-            <div>
-              <h4 class="font--regular font--semi-bold featured-posts__post-title">Scribe</h4>
-              <p class="font--regular font--secondary-color featured-posts__post-description">How can I support the small businesses within my community.</p>
-            </div>
-          </a>
-        </div>
-        <!-- Featured Post 2 -->
-        <div class="featured-posts__post">
-          <a href="#" class="featured-posts__post-wrapper">
-            <img src="https://source.unsplash.com/random/1200x675" alt="Featured Post Image" class="featured-posts__img">
-            <div>
-              <h4 class="font--regular font--semi-bold featured-posts__post-title">Scribe</h4>
-              <p class="font--regular font--secondary-color featured-posts__post-description">How can I support the small businesses within my community.</p>
-            </div>
-          </a>
-        </div>
+        {% for article in collections.articles.slice(0, 2) %}
+          <div class="featured-posts__post">
+            <a href="{{ article.url }}" class="featured-posts__post-wrapper">
+              <img src="{{ article.data.image }}" alt="{{ article.data.imageAlt }}/" class="featured-posts__img">
+              <div>
+                <h4 class="font--regular font--semi-bold featured-posts__post-title">Scribe</h4>
+                <p class="font--regular font--secondary-color featured-posts__post-description">{{ article.data.title }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>

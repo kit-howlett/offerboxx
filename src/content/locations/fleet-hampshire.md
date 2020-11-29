@@ -1,4 +1,4 @@
 ---
 title: Fleet, Hampshire
-desc: Search our extensive list of local business changing and adapting to a new way of normal. Take a look and <span class="font--accent-color">#keepshoppinglocal.</span>
+desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor at mauris quis iaculis. Mauris non quam ultricies, convallis enim sit amet, vehicula nisl.
 ---

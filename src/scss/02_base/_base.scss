@@ -15,6 +15,10 @@ body {
   }
 }
 
+main:focus {
+  outline: none;
+}
+
 ul, ol {
 list-style: none;
 padding: 0;

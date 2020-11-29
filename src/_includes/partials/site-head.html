@@ -11,22 +11,32 @@
       </span>
     </button>
 
-    <ul class="site-header__menu site-header__menu--normal">
-      <li class="site-header__menu-item"><a href="#" class="site-header__link">Discover</a></li>
-      <li class="site-header__menu-item"><a href="#" class="site-header__link">Exclusive Offers</a></li>
-      <li class="site-header__menu-item"><a href="#" class="site-header__link">Scribe</a></li>
-      <li class="site-header__menu-item"><a href="#" class="site-header__link">Contact Us</a></li>
-      <a class="btn btn--secondary btn--small site-header__cta">Post For Free</a>
-    </ul>
+    <div class="site-header__menu site-header__menu--normal">
+      <ul class="page-container site-header__menu-inner site-header__menu-inner--normal">
+        {% for item in navigation %}
+          <li class="site-header__menu-item">
+            <a href="{{ item.url }}" class="site-header__link">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <a href="/contact-us" class="btn btn--secondary btn--small site-header__cta">Post For Free</a>
+    </div>
 
     <div id="mobile-nav" class="site-header__menu site-header__menu--mobile mobile-menu">
-      <ul class="page-container mobile-menu__inner">
-        <li class="site-header__menu-item"><a href="#" class="site-header__link">Discover</a></li>
-        <li class="site-header__menu-item"><a href="#" class="site-header__link">Exclusive Offers</a></li>
-        <li class="site-header__menu-item"><a href="#" class="site-header__link">Scribe</a></li>
-        <li class="site-header__menu-item"><a href="#" class="site-header__link">Contact Us</a></li>
+      <ul class="page-container site-header__menu-inner site-header__menu-inner--mobile">
+        {% for item in navigation %}
+          <li class="site-header__menu-item site-header__menu-item--mobile">
+            <a href="{{ item.url }}" class="site-header__link site-header__link--mobile">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
       </ul>
-      <a class="btn btn--secondary btn--small site-header__cta">Post For Free</a>
+      <div class="page-container">
+        <a href="/contact-us" class="btn btn--secondary site-header__cta site-header__cta--mobile">Post For Free</a>
+      </div>
     </div>
   </nav>
 </header>

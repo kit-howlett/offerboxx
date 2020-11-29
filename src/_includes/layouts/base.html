@@ -3,10 +3,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.name }} - {{ title }}</title>
+    {% include "partials/meta-info.html"%}
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
     <link rel="stylesheet" href="/css/main.css?{{ assetHash }}" onload="this.media='all'" />
 
@@ -18,24 +17,17 @@
     {% endif %}
   </head>
   <body>
-    {% include "partials/site-head.html" %}
+    {% if page.url == '/' %}
+      {% include "partials/site-head-2.html" %}
+    {% else %}
+      {% include "partials/site-head.html" %}
+    {% endif %}
+
     <main id="main-content" tabindex="-1">
       {% block content %}{% endblock %}
     </main>
     {% include "partials/site-footer.html" %}
     
-    <script>
-      var body = document.querySelector('body');
-      var hamburger = document.querySelector('#hamburger');
-      var mobileNav = document.querySelector('#mobile-nav');
-
-      function toggleMenu () {
-        body.classList.toggle('mobile-menu-open');
-        hamburger.classList.toggle('is-active');
-        mobileNav.classList.toggle('show');
-      }
-
-      hamburger.addEventListener('click', toggleMenu);
-    </script>
+    <script src="/js/nav.js"></script>
   </body>
 </html>

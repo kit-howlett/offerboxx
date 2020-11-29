@@ -1,7 +1,26 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-  {% for article in collections.articles %}
-    Article overview
-  {% endfor %}
+  <section class="page-container blog-listings__section">
+    <h1 class="font--bold font--xxx-large text-center blog-listings__heading">Welcome To Scribe</h1>
+    <p class="font--regular text-center blog-listings__para">We have put together a few articles we think you might enjoy. If you do, make sure you give them a share on social media!</p>
+    <div class="blog-listings__listings-wrapper">
+      {% for article in collections.articles %}
+
+        <article class="blog-listings__blog-post">
+          <img src="{{ article.data.image }}" alt="{{ article.data.imageAlt }}" class="blog-listings__blog-img">
+          <div class="blog-listings__blog-details">
+            <h2 class="font--large font--bold blog-listings__blog-title">{{ article.data.title }}</h2>
+            <p class="font--regular blog-listings__blog-description">
+              {{ article.data.intro | safe | truncate(100) }}
+            </p>
+            <div class="blog-listings__cta-wrapper">
+              <a href="{{ article.url }}" class="btn btn--secondary btn--small">Read More<i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+      {% endfor %}
+    </div>
+  </section>
 {% endblock %}

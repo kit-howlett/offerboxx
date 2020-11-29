@@ -6,8 +6,7 @@
     <div class="profile-listings__wrapper">
       <img src="/images/icons/categories/{{ title | slug }}.svg" alt="{{ title }} Icon" class="profile-listings__icon">
       <h1 class="font--bold font--xxx-large text-center profile-listings__heading">{{ title }}</h1>
-      <p class="font--regular text-center profile-listings__para">Search our extensive list of local business changing and adapting to a new way of normal. Take a look and <span class="font--accent-color">#keepshoppinglocal.</span></p>
-      <!-- Search Results -->
+      <p class="font--regular text-center profile-listings__para">{{ desc }}</p>
       <div class="profile-listings__listings listing">
         <ul class="listing__wrapper">
           {% for listing in collections.listings %}

@@ -1,14 +1,14 @@
 [
   {
-    "text": "Home",
-    "url": "/"
+    "text": "Discover",
+    "url": "/categories"
   },
   {
-    "text": "Contact Us",
-    "url": "/contact-us"
+    "text": "Exclusive Offers",
+    "url": "#"
   },
   {
-    "text": "Post For Free",
-    "url": "https://example.com"
+    "text": "Scribe",
+    "url": "/scribe"
   }
 ]

@@ -84,3 +84,19 @@
     bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 }
+
+.hamburger-inner--white {
+  &,
+  &::before,
+  &::after {
+    background-color: $hamburger-layer-color-alt;
+  }
+}
+
+.hamburger.is-active .hamburger-inner--white {
+  &,
+  &::before,
+  &::after {
+    background-color: $hamburger-layer-color-alt;
+  }
+}
