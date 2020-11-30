@@ -1,8 +1,60 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %}
 
 {% block content %}
-  <article>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-  </article>
+  <div class="page-container home-page">
+    <section class="home-page__section">
+      <h2 class="font--xx-large font--bold text-center home-page__heading">Search By Category</h1>
+      <p class="font--regular text-center home-page__para">Just because a business is small, it doesn't mean it can't be mighty. Have a browse through our categories, you never know what you might find. </p>
+      <div class="home-page__categories categories">
+        <ul class="categories__wrapper">
+          {% for category in collections.categories | oSort %}
+            <li class="categories__listing">
+              <img src="/images/icons/categories/{{ category.data.title | slug }}.svg" alt="{{ category.data.title }} Icon" class="categories__icon">
+              <h3 class="font--regular font--bold text-center categories__title">{{ category.data.title }}</h3>
+              <div class="text-center categories__cta-wrapper">
+                <a class="btn btn--primary btn--x-small" href="{{ category.url }}">View All</a>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <section class="home-page__section">
+      <h2 class="font--xx-large font--bold text-center home-page__heading">Search By Location</h1>
+      <p class="font--regular text-center home-page__para">Small businesses are special, they provide something the big players just can't match -  exceptional service, a wealth of knowledge and unbeatable quality. Why not take a quick look at some of the fantastic small businesses on your doorstep!</p>
+      <div class="home-page__locations locations">
+        <ul class="locations__locations-list">
+          {% for location in collections.locations | oSort %}
+            <li class="locations__list-item">
+              <a href="{{ location.url }}" class="locations__link">
+                <img src="/images/icons/locations/location.svg" alt="{{ location.data.title }} Icon" class="locations__icon">
+                <p class="font--regular text-center">{{ location.data.title }}</p>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+    
+    <section id="our-mission" class="home-page__section">
+      <h2 class="font--xx-large font--bold text-center home-page__heading">We're On A Mission 🚀</h2>
+      <p class="font--regular text-center home-page__para">Play your part in an evolving story and help us bring our ambitious vision to.</p>
+      <div class="home-page__about about">
+        <p class="font--regular">
+          "One day, Offerboxx will be <em>the</em> place to discover exclusive discounts, offers and rewards provided by the businesses you know and love. But wait, we won't stop there - Offerboxx will also provide the perfect opportunity to explore and uncover new businesses you are yet to discover and almost certain to love! Our mission is ambitious and we'll need your help but we're confident Offerboxx will be a house hold name soon.
+        </p>
+        <p class="font--regular">
+          However, right now we're on an arguably more important and serious mission. We want to ensure the small businesses, who are undoubtably the beating heart ♥️ of the local economy, survive and prosper despite the difficulties the Coronavirus pandemic has brought about.
+        </p>
+        <p class="font--regular">
+          So, for now Offerboxx is a directory listing the fantastic businesses you have right on your doorstep. Be reassured and read how your favourite business is operating safely right now. Easily reach out and learn how you can support them through the crisis. So, explore Offerboxx, you never know what you might find and <span class="font--accent-color">#keepshoppinglocal</span>".
+        </p>
+        <div class="about__founder-wrapper">
+          <img src="/images/blogpost-profile-image.jpg" alt="Kit Howlett - Founder Offerboxx" class="about__founder-img">
+          <p class="font--small">Kit Howlett - <br><b class="font--semi-bold">Offerboxx Founder</b></p>
+        </div>
+      </div>
+    </section>
+  </div>
 {% endblock %}

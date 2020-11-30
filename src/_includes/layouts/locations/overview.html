@@ -1,0 +1,22 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="page-container">
+  <div class="profile-listings__wrapper">
+    <h1 class="font--bold font--xxx-large text-center profile-listings__heading">Locations</h1>
+    <p class="font--regular text-center profile-listings__para">Small businesses are special, they provide something the big players just can't match - exceptional service, a wealth of knowledge and unbeatable quality. Why not take a quick look at some of the fantastic small businesses on your doorstep!</p>
+    <!-- Search Results -->
+    <div class="home-page__locations locations">
+      <ul class="locations__locations-list">
+        {% for location in collections.locations %}
+          <li class="locations__list-item">
+            <a href="{{ location.url }}" class="locations__link">
+              <img src="/images/icons/locations/location.svg" alt="{{ location.data.title }} Icon" class="locations__icon">
+              <p class="font--regular text-center">{{ location.data.title }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

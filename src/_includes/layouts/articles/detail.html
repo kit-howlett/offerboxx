@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+
+
+{% block content %}
+  <section class="page-container blog-post__section">
+    <h1 class="font--bold font--xxx-large text-center blog-post__heading">{{ title }}</h1>
+    <p class="font--regular text-center blog-post__para">{{ intro }}</p>
+    <img src="{{ image }}" alt="{{ imageAlt }}" class="blog-post__hero-img">
+
+    <article class="blog-post__article">
+      <div class="blog-post__article-info">
+        <img src="{{ authorImage }}" alt="Article Author Image" class="blog-post__profile-image">
+        <div>
+          <p class="font--small"><span class="font--bold">Author: </span>{{ authorName }}</p>
+          <p class="font--small"><span class="font--bold">Posted: </span>{{ postDate }}</p>
+        </div>
+      </div>
+      
+      <div class="blog-post__article-text">
+        {{ content | safe }}
+      </div>
+    </article>
+  </section>
+{% endblock %}
+
+<!-- {{ title }}
+{{ content | safe }} -->

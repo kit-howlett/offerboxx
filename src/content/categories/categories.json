@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/categories/detail.html",
+  "permalink": "/category/{{ title | slug }}/index.html",
+  "date": "Last Modified"
+}

@@ -1,6 +1,14 @@
 [
   {
-    "text": "Home",
-    "url": "/"
+    "text": "Discover",
+    "url": "/categories"
+  },
+  {
+    "text": "Exclusive Offers",
+    "url": "#"
+  },
+  {
+    "text": "Scribe",
+    "url": "/scribe"
   }
 ]

@@ -1,0 +1,28 @@
+.status {
+  display: flex;
+  align-items: center;
+  width: auto;
+
+  &__status-icon {
+    margin-right: 0.625em;
+    width: 16px;
+    height: 16px;
+    background-color: $success-light-color;
+    border: solid 2px $success-dark-color;
+    border-radius: 100%;
+
+    &--warning {
+      background-color: $warning-light-color;
+      border: solid 2px $warning-dark-color;
+    }
+
+    &--alert {
+      background-color: $alert-light-color;
+      border: solid 2px $alert-dark-color;
+    }
+  }
+  
+  &__status__text {
+    width: auto;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin rmw($screenSize) {
+  @media screen and (max-width: #{$screenSize}px) {
+    @content;
+  }
+}
