@@ -7,7 +7,7 @@
       <p class="font--regular text-center home-page__para">Just because a business is small, it doesn't mean it can't be mighty. Have a browse through our categories, you never know what you might find. </p>
       <div class="home-page__categories categories">
         <ul class="categories__wrapper">
-          {% for category in collections.categories %}
+          {% for category in collections.categories | oSort %}
             <li class="categories__listing">
               <img src="/images/icons/categories/{{ category.data.title | slug }}.svg" alt="{{ category.data.title }} Icon" class="categories__icon">
               <h3 class="font--regular font--bold text-center categories__title">{{ category.data.title }}</h3>
@@ -25,7 +25,7 @@
       <p class="font--regular text-center home-page__para">Small businesses are special, they provide something the big players just can't match -  exceptional service, a wealth of knowledge and unbeatable quality. Why not take a quick look at some of the fantastic small businesses on your doorstep!</p>
       <div class="home-page__locations locations">
         <ul class="locations__locations-list">
-          {% for location in collections.locations %}
+          {% for location in collections.locations | oSort %}
             <li class="locations__list-item">
               <a href="{{ location.url }}" class="locations__link">
                 <img src="/images/icons/locations/location.svg" alt="{{ location.data.title }} Icon" class="locations__icon">

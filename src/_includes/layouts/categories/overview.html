@@ -8,7 +8,7 @@
       <!-- Search Results -->
       <div class="home-page__categories categories">
         <ul class="categories__wrapper">
-          {% for category in collections.categories %}
+          {% for category in collections.categories | oSort %}
             <li class="categories__listing">
               <img src="/images/icons/categories/{{ category.data.title | slug }}.svg" alt="{{ category.data.title }} Icon" class="categories__icon">
               <h3 class="font--regular font--bold text-center categories__title">{{ category.data.title }}</h3>
