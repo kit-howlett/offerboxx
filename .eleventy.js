@@ -2,7 +2,7 @@
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const { tagURL, tagName } = require('./src/filters/tags.js');
-const categoryFilter = require('./src/filters/category-filter.js');
+const oSort = require('./src/filters/o-sort.js');
 
 module.exports = config => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -17,7 +17,7 @@ module.exports = config => {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('tagURL', tagURL);
   config.addFilter('tagName', tagName);
-  config.addFilter('categoryFilter', categoryFilter);
+  config.addFilter('oSort', oSort);
 
   // Returns a collection of listings in reverse date order
   config.addCollection('listings', collection => {
