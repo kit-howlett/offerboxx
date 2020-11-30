@@ -32,5 +32,8 @@
     "gulp-sass": "^4.1.0",
     "moment": "^2.29.1",
     "sass": "^1.28.0"
+  },
+  "dependencies": {
+    "slugify": "^1.4.6"
   }
 }

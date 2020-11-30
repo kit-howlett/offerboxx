@@ -1,20 +1,42 @@
-<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <nav class="page-container site-header__nav">
+    <a href="/" class="site-header__logo-link">
+      <img src="/images/offerboxx_primary-logo.svg" alt="Offerboxx Logo" class="site-header__logo">
+    </a>
+    
+    <button id="hamburger" class="site-header__hamburger hamburger hamburger--spring" type="button">
+      <span class="font--bold font--large" style="margin-right: 1em;">Menu</span>
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
 
-<header class="site-head">
-  <div class="wrapper">
-    <div class="site-head__inner">
-      <a class="site-head__logo" href="/" aria-label="{{ site.name }} - home">
-        {% include "partials/logo.svg" %}
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <ul class="nav__list">
-          {% for item in navigation %}
-            <li>
-              <a {{ "class=button data-variant=ghost" if loop.last }} href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
+    <div class="site-header__menu site-header__menu--normal">
+      <ul class="page-container site-header__menu-inner site-header__menu-inner--normal">
+        {% for item in navigation %}
+          <li class="site-header__menu-item">
+            <a href="{{ item.url }}" class="site-header__link">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <a href="/contact-us" class="btn btn--secondary btn--small site-header__cta">Post For Free</a>
     </div>
-  </div>
+
+    <div id="mobile-nav" class="site-header__menu site-header__menu--mobile mobile-menu">
+      <ul class="page-container site-header__menu-inner site-header__menu-inner--mobile">
+        {% for item in navigation %}
+          <li class="site-header__menu-item site-header__menu-item--mobile">
+            <a href="{{ item.url }}" class="site-header__link site-header__link--mobile">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="page-container">
+        <a href="/contact-us" class="btn btn--secondary site-header__cta site-header__cta--mobile">Post For Free</a>
+      </div>
+    </div>
+  </nav>
 </header>

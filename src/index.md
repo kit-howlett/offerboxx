@@ -1,4 +1,4 @@
 ---
-title: 'Home'
+title: 'Offerboxx'
 layout: 'layouts/home.html'
 ---

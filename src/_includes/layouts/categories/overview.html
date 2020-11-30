@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+  <div class="page-container">
+    <div class="profile-listings__wrapper">
+      <h1 class="font--bold font--xxx-large text-center profile-listings__heading">Categories</h1>
+      <p class="font--regular text-center profile-listings__para">Just because a business is small, it doesn't mean it can't be mighty. Have a browse through our categories, you never know what you might find.</p>
+      <!-- Search Results -->
+      <div class="home-page__categories categories">
+        <ul class="categories__wrapper">
+          {% for category in collections.categories | oSort %}
+            <li class="categories__listing">
+              <img src="/images/icons/categories/{{ category.data.title | slug }}.svg" alt="{{ category.data.title }} Icon" class="categories__icon">
+              <h3 class="font--regular font--bold text-center categories__title">{{ category.data.title }}</h3>
+              <div class="text-center categories__cta-wrapper">
+                <a class="btn btn--primary btn--x-small" href="{{ category.url }}">View All</a>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+{% endblock %}
