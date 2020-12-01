@@ -1,0 +1,32 @@
+.legal {
+  
+  &__heading {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  &__legal-wrapper {
+    margin: 2.5em auto 0;
+    max-width: 1100px;
+  }
+
+  &__legal-section + &__legal-section {
+    margin-top: 2em;
+  }
+
+  &__legal--title {
+    margin-bottom: .5em;
+  }
+
+  ul {
+    margin-left: 2.5em;
+  }
+
+  li {
+    list-style: disc;
+  }
+
+  p + p {
+    margin: 1em 0;
+  }
+}
