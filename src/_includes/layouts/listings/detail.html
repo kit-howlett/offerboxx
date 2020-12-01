@@ -73,24 +73,24 @@
           <div class="profile-contact__wrapper profile-contact__wrapper--1">
 
             <div class="profile-contact__container">
-              <img src="/images/cursor-icon.svg" alt="" class="profile-contact__icon">
+              <img src="/images/icons/miscellaneous/cursor-icon.svg" alt="Website Icon" class="profile-contact__icon">
               <p class="font--regular"><span class="font--bold">Website: </span><a href="{{ contactDetails.website }}" target="_blank">{{ contactDetails.website }}</a></li></p>
             </div>
 
             <div class="profile-contact__container">
-              <img src="/images/email-icon.svg" alt="" class="profile-contact__icon">
+              <img src="/images/icons/miscellaneous/email-icon.svg" alt="Email Icon" class="profile-contact__icon">
               <p class="font--regular"><span class="font--bold">Email: </span><a href="mailto:{{ contactDetails.email }}">{{ contactDetails.email }}</a></p>
             </div>
 
             <div class="profile-contact__container">
-              <img src="/images/phone-icon.svg" alt="" class="profile-contact__icon">
+              <img src="/images/icons/miscellaneous/phone-icon.svg" alt="Phone Icon" class="profile-contact__icon">
               <p class="font--regular"><span class="font--bold">Phone: </span><a href="tel:{{ contactDetails.phone }}">{{ contactDetails.phone }}</a></p>
             </div>
           </div>
           <div class="profile-contact__wrapper profile-contact__wrapper--2">
             {% for key, val in socialLinks %}
               <a href="{{ val }}" class="profile-contact__social-icon">
-                <img src="/images/social/{{ key }}.svg" alt="{{ key | capitalize }} Icon">
+                <img src="/images/icons/miscellaneous/social-{{ key }}.svg" alt="{{ key | capitalize }} Icon">
               </a>
             {% endfor %}
           </div>
