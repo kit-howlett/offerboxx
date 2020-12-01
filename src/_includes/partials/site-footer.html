@@ -38,7 +38,7 @@
     <div class="footer-menu__col footer-menu__col--2">
       <h6 class="font--regular font--bold footer-menu__title">Business Categories</h6>
       <ul>
-        {% for category in collections.categories %}
+        {% for category in collections.categories | oSort %}
           <li class="font--regular"><a href="/categories/{{ category.data.title | slug }}" class="font--secondary-color footer-menu__link">{{ category.data.title }}</a></li>
         {% endfor %}
       </ul>
