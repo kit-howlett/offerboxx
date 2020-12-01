@@ -3,7 +3,7 @@
   <div class="site-footer__newsletter-signup newsletter-signup">
     <div class="newsletter-signup__wrapper">
       <h2 class="font--bold font--xx-large text-center newsletter-signup__heading">Don't Miss Out, Stay In The Loop</h2>
-      <p class="font--regular text-center newsletter-signup__para">Want to know when our platform goes live? Simply pop your email address down in the form below and we will notify you when our site has launched. Exciting times!</p>
+      <p class="font--regular text-center newsletter-signup__para">We're just getting started and would love to keep you up to date with all exciting updates. We would also love you to hear first of any exclusive offers or discounts provided by our partners - exciting times!</p>
       <!-- Start Of Mailchimp Signup Form -->
       <div id="mc_embed_signup">
         <form action="https://offerboxx.us2.list-manage.com/subscribe/post?u=c1e52f73e7e65b7cb2d2b6e6f&amp;id=d12adef66a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
@@ -15,7 +15,7 @@
             </div>
             <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn--primary">Subscribe</button>
           </div>
-          <p class="font--x-small" style="margin-top: 20px;">By clicking above to subscribe you grant us permission to add you to our mailing list which you can unsubscribe from at any time by clicking the link in the footer of our emails. For information about our privacy practices, please see our <a href="#">privacy policy</a>. We use Mailchimp as our marketing platform. By subscribing, you acknowledge that your information will be transferred to Mailchimp for processing. Learn more about Mailchimp's privacy practices.</p>
+          <p class="font--x-small text-center" style="margin-top: 20px;">By clicking above to subscribe you grant us permission to add you to our mailing list which you can unsubscribe from at any time by clicking the link in the footer of our emails. For information about our privacy practices, please see our <a href="#">privacy policy</a>. We use Mailchimp as our marketing platform. By subscribing, you acknowledge that your information will be transferred to Mailchimp for processing. Learn more about Mailchimp's privacy practices.</p>
         </form>
       </div>
       <!-- End Of Mailchimp Signup Form -->
@@ -27,19 +27,19 @@
     <div class="footer-menu__col footer-menu__col--1">
       <h6 class="font--regular font--bold footer-menu__title">Helpful Links</h6>
       <ul>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Discover</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Exclusive Offers</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Scribe</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Contact Us</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">List Your Business</a></li>
+        <li class="font--regular"><a href="/categories" class="font--secondary-color footer-menu__link">Discover</a></li>
+        <li class="font--regular"><a href="/exclusive-offers" class="font--secondary-color footer-menu__link">Exclusive Offers</a></li>
+        <li class="font--regular"><a href="/scribe" class="font--secondary-color footer-menu__link">Scribe</a></li>
+        <li class="font--regular"><a href="/contact-us" class="font--secondary-color footer-menu__link">Contact Us</a></li>
+        <li class="font--regular"><a href="https://kit948769.typeform.com/to/u4mNLjvB" target="_blank" class="font--secondary-color footer-menu__link">List Your Business</a></li>
       </ul>
     </div>
     <!-- Column 2 -->
     <div class="footer-menu__col footer-menu__col--2">
       <h6 class="font--regular font--bold footer-menu__title">Business Categories</h6>
       <ul>
-        {% for category in collections.categories %}
-          <li class="font--regular"><a href="/categories/{{ category.data.title | slug }}" class="font--secondary-color footer-menu__link">{{ category.data.title }}</a></li>
+        {% for category in collections.categories | oSort %}
+          <li class="font--regular"><a href="{{ category.url }}" class="font--secondary-color footer-menu__link">{{ category.data.title }}</a></li>
         {% endfor %}
       </ul>
     </div>
@@ -47,8 +47,8 @@
     <div class="footer-menu__col footer-menu__col--3">
       <h6 class="font--regular font--bold footer-menu__title">Further Information</h6>
       <ul>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Terms & Conditions</a></li>
-        <li class="font--regular"><a href="#" class="font--secondary-color footer-menu__link">Privacy Policy</a></li>
+        <li class="font--regular"><a href="/terms-and-conditions" class="font--secondary-color footer-menu__link">Terms & Conditions</a></li>
+        <li class="font--regular"><a href="/privacy-policy" class="font--secondary-color footer-menu__link">Privacy Policy</a></li>
       </ul>
     </div>
     <!-- Column 4 -->

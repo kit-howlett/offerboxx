@@ -8,7 +8,7 @@
     <!-- Search Results -->
     <div class="home-page__locations locations">
       <ul class="locations__locations-list">
-        {% for location in collections.locations %}
+        {% for location in collections.locations | oSort %}
           <li class="locations__list-item">
             <a href="{{ location.url }}" class="locations__link">
               <img src="/images/icons/locations/location.svg" alt="{{ location.data.title }} Icon" class="locations__icon">
