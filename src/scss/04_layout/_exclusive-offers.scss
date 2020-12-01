@@ -1,0 +1,20 @@
+.exclusive-offers {
+  
+  &__heading {
+    margin: 0 auto .5em;
+    max-width: 600px;
+  }
+
+  &__para {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  &__img {
+    margin: 2.5em auto 1.5625em;
+    max-width: 850px;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+}
