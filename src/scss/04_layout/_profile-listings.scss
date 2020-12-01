@@ -76,6 +76,14 @@
       flex-direction: column;
       align-items: center;
     }
+
+    p {
+      max-width: 400px;
+
+      @include rmw($breakpoint-large-mobile) {
+        text-align: center;
+      }
+    }
   }
 
   &__logo {
@@ -95,14 +103,6 @@
 
   &__name {
     margin-bottom: 0.2777em;
-
-    @include rmw($breakpoint-large-mobile) {
-      text-align: center;
-    }
-  }
-  
-  &__description {
-    max-width: 400px;
 
     @include rmw($breakpoint-large-mobile) {
       text-align: center;
