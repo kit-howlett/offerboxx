@@ -8,7 +8,7 @@
         <!-- Profile Logo & Cover Photo -->
         <div class="profile__header">
           <img src="/images/listings/{{ title | slug }}/header/{{ header.src }}" alt="{{ header.alt }}" class="profile__coverphoto">
-          <img src="/images/listings/{{ title | slug }}/logo/{{ logo }}" alt="{{ title }} Logo" class="profile__profilephoto">
+          <img src="/images/listings/{{ title | slug }}/logo/{{ logo.src }}" alt="{{ logo.alt }} Logo" class="profile__profilephoto">
         </div>
         <!-- Profile Details -->
         <div class="profile__profile-details">
@@ -26,9 +26,9 @@
           <div class="profile__status-wrapper">
             <div class="status">
               <div>
-                <div class="status__status-icon status__status-icon--{{ status.icon }}"></div>
+                <div class="status__status-icon status__status-icon--{{ covidStatus.icon }}"></div>
               </div>
-              <p class="font--small status__status-text" ><span class="font--bold">Status:</span> {{ status.text }}</p>
+              <p class="font--small status__status-text" ><span class="font--bold">Status:</span> {{ covidStatus.text }}</p>
             </div>
           </div>
           <!-- Bio -->
@@ -37,7 +37,7 @@
           </div>
           <!-- CTA -->
           <div class="profile__cta-wrapper">
-            <a href="{{ link }}" class="btn btn--primary" target="_blank">Visit Our Website<i class="fas fa-external-link-alt"></i></a>
+            <a href="{{ ctaLink }}" class="btn btn--primary" target="_blank">Visit Our Website<i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
         <!-- Covid Message -->
         <div class="profile-covid-info">
           <h2 class="font--bold font--large profile-covid-info__title">Information You Should Know</h2>
-          {{ information | safe }}
+          {{ covidInfomation | safe }}
         </div>
         <!-- Opening Hours Details -->
         <div class="profile-opening-hours">
@@ -89,7 +89,7 @@
           </div>
           <div class="profile-contact__wrapper profile-contact__wrapper--2">
             {% for key, val in socialLinks %}
-              <a href="{{ val }}" class="profile-contact__social-icon">
+              <a href="{{ val }}" class="profile-contact__social-icon" target="_blank">
                 <img src="/images/icons/miscellaneous/social-{{ key }}.svg" alt="{{ key | capitalize }} Icon">
               </a>
             {% endfor %}
