@@ -8,10 +8,10 @@ tags:
   - Location::Aldershot, Hampshire
   - Category::Technology
 header:
-  src: adapt-header.png
+  src: header.png
   alt: Adapt Digital Header
 logo: 
-  src: adapt-logo.png
+  src: logo.png
   alt: Adapt Digital Logo
 covidInfomation: '
 <p class="font--regular">We’re grateful beyond words to be able to say Covid-19 has not required us change anything in our day to day operations.</p>
@@ -32,7 +32,7 @@ openingHours:
   sunday: 'Closed'
 contactDetails:
   email: 'hello@adapt.digital'
-  phone: '+443301330770'
+  phone: '03301330770'
   website: 'https://adapt.digital'
 socialLinks:
   facebook: 'https://www.facebook.com/adaptdigital'
