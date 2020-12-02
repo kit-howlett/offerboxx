@@ -39,5 +39,5 @@ socialLinks:
   messenger: 'https://www.facebook.com/adaptdigital'
   instagram: 'https://www.instagram.com/adaptdigital/'
 ctaLink: 'https://adapt.digital'
-metaDesc: 'Hello World'
+metaDesc: 'We create bespoke web & mobile applications to make your life easier. Learn more on Offerboxx.'
 ---
