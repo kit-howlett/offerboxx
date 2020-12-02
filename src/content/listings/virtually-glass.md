@@ -5,7 +5,6 @@ desc: '
 tags:
   - Location::Church Crookham, Hampshire
   - Category::Other
-  - Category::Tradespeople
 header:
   src: header.jpg
   alt: Virtually Glass Header
