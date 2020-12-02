@@ -41,5 +41,5 @@ socialLinks:
   messenger: 'https://m.me/sugarplumonline'
   instagram: 'https://www.instagram.com/sugarplumfleet'
 ctaLink: 'https://www.sugarplumonline.co.uk'
-metaDesc: 'Sugarplum have a great selection of ladies clothing, footwear, accessories, jewellery, gifts & homeware & constantly update our collections.'
+metaDesc: 'Sugarplum have a great selection of ladies clothing, footwear, accessories, jewellery, gifts & homeware & constantly update our collections'
 ---

@@ -6,6 +6,7 @@ desc: '
 <p class="font--regular">We passionately believe that technology, specifically software, is here to help – not hinder – us. This is the foundation upon which Adapt was formed in February 2015. Since then, we have been imagining creative ways to solve an infinite variety of problems for an ever expanding portfolio of clients.</p>'
 tags:
   - Location::Aldershot, Hampshire
+  - Category::Financial, Legal & Business
   - Category::Technology
 header:
   src: header.png
