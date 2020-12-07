@@ -3,7 +3,7 @@ title: 'Mark Bowen Wealth Management'
 desc: '
 <p class="font--regular">At Mark Bowen Wealth Management we provide bespoke financial advice that is clear and easy to understand. Our client relationships are key to our business, and these are founded on building trust and respect - with an emphasis on creating a long term partnership.</p>
 
-<p class="font--regular">Mark Bowen Wealth Management LLP is an Appointed Representative of and represents only St. James's Place Wealth Management plc (which is authorised and regulated by the Financial Conduct Authority).</p>'
+<p class="font--regular">Mark Bowen Wealth Management LLP is an Appointed Representative of and represents only St. James Place Wealth Management plc (which is authorised and regulated by the Financial Conduct Authority).</p>'
 tags:
   - Location::Fleet, Hampshire
   - Category::Financial, Legal & Business
